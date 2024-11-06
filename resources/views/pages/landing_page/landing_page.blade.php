@@ -16,13 +16,13 @@
                     bandara, <br> memungkinkan staf bandara untuk menemukan dan menghubungi nomor telepon dengan
                     efisien.
                 </h3>
-                {{-- <a href="#Bidang">
+                <a href="#Bidang">
                     <button
                         class="text-[24px] w-[176px] h-[50px] text-white font-semibold mt-10 rounded-md flex items-center justify-center"
                         style="background: linear-gradient(90deg, #66B82D 0.07%, #009BE0 96.65%);">
                         Cari <span class="ml-2">↓</span>
                     </button>
-                </a> --}}
+                </a>
             </div>
         </div>
     </section>

@@ -15,6 +15,7 @@ Route::get('/detail-bidang', [PageController::class, 'detailBidang']);
 Route::get('/dashboard-admin', [AdminController::class, 'dashboard']);
 Route::get('/master-data', [AdminController::class, 'masterData'])->name('master-data');
 Route::post('/master-data', [AdminController::class, 'storeData']);
+Route::get('master-data/{id}', [AdminController::class, 'viewData'])->name('master-data.view');
 Route::get('/master-data/{id}/edit', [AdminController::class, 'editData']);
 Route::put('/master-data/{id}', [AdminController::class, 'updateData']);
 Route::delete('/master-data/{id}', [AdminController::class, 'deleteData']);

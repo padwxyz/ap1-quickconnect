@@ -17,7 +17,7 @@ class AdminController extends Controller
         $newDataThisMonth = Contact::whereMonth('created_at', now()->month)->count();
         $recentContacts = Contact::with(['division', 'subdivision'])->orderBy('created_at', 'desc')->take(5)->get();
 
-        return view('admin.dashboard', compact('totalData', 'activeDivisions', 'activeSubdivisions', 'newDataThisMonth', 'recentContacts'));
+        return view('pages.admin.dashboard', compact('totalData', 'activeDivisions', 'activeSubdivisions', 'newDataThisMonth', 'recentContacts'));
     }
 
     public function masterData(Request $request)
@@ -40,7 +40,7 @@ class AdminController extends Controller
         $divisions = Division::all();
         $subdivisions = Subdivision::all();
 
-        return view('admin.master_data', compact('contacts', 'divisions', 'subdivisions'));
+        return view('pages.admin.master_data', compact('contacts', 'divisions', 'subdivisions'));
     }
 
     public function storeData(Request $request)
@@ -72,13 +72,19 @@ class AdminController extends Controller
         return redirect()->route('master-data')->with('success', 'Data berhasil ditambahkan');
     }
 
+    public function viewData($id)
+    {
+        $contact = Contact::with(['division', 'subdivision'])->findOrFail($id);
+        return view('pages.admin.view_data', compact('contact'));
+    }
+
     public function editData($id)
     {
         $contact = Contact::findOrFail($id);
         $divisions = Division::all();
         $subdivisions = Subdivision::where('division_id', $contact->division_id)->get();
 
-        return view('admin.edit_data', compact('contact', 'divisions', 'subdivisions'));
+        return view('pages.admin.edit_data', compact('contact', 'divisions', 'subdivisions'));
     }
 
     public function updateData(Request $request, $id)

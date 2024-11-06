@@ -6,12 +6,14 @@
             </div>
 
             <div class="hidden sm:flex space-x-4 items-center justify-end flex-1">
-                <a href="#Home"
-                    class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">Home</a>
-                <a href="#About"
-                    class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">About</a>
-                <a href="#Service"
-                    class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">Service</a>
+                <a href="#Beranda"
+                    class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">Beranda</a>
+                <a href="#Tentang"
+                    class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">Tentang</a>
+                <a href="#Layanan"
+                    class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">Layanan</a>
+                <a href="#Bidang"
+                    class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">Bidang</a>
                 <a href="#FAQ"
                     class="rounded-md px-3 py-2 text-[18px] font-medium text-white hover:bg-[#66B82D] hover:text-white">FAQ</a>
             </div>
